@@ -1,0 +1,33 @@
+{
+  "name": "rjsx-email-debug",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.462.0",
+    "@jsx-email/all": "^3.0.1",
+    "@jsx-email/cli": "^3.0.1",
+    "@jsx-email/render": "^3.0.1",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "next": "14.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "superstruct": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5"
+  }
+}
