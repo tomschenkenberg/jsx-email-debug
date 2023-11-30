@@ -16,6 +16,7 @@ import {
   Preview,
 } from "@jsx-email/all";
 import { contentUpdateEmailDemoContent } from "../lib/content-update-email/demo-content";
+import * as React from "react";
 
 export const TemplateName = "content-update";
 
@@ -133,7 +134,7 @@ export const ContentUpdateEmailTemplate = ({
                     <Column align="right">
                       <Button
                         href={itemLink}
-                        className="rounded-md bg-teal-700 text-white mt-4 p-2">
+                        className="rounded-md bg-[#0D9488] text-white mt-4 p-2">
                         Check out this story on TCE
                       </Button>
                     </Column>
@@ -159,7 +160,7 @@ export const ContentUpdateEmailTemplate = ({
                     {subscriber.frequency} {channel.name} content update list.
                     You can{" "}
                     <Link
-                      className="underline text-teal-800"
+                      className="underline text-[#0F766E]"
                       href={`https://tce.exchange/content-updates/unsubscribe?id=${subscriber.id}&list=${channel.name}`}>
                       unsubscribe from this list
                     </Link>
