@@ -1,9 +1,15 @@
 version: '3.8'
 services:
     web:
+        env_file:
+            - .env
         container_name: jsxemail
         build:
             context: ./
             dockerfile: ./Dockerfile
+            args:
+                AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+                AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+                AWS_SES_REGION: ${AWS_SES_REGION}
         ports:
             - 3000:3000

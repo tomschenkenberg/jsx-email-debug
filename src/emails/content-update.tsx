@@ -32,16 +32,9 @@ export const ContentUpdateEmailTemplate = ({
   subscriber,
   tceUser,
 }: ContentUpdateEmailProps) => {
-  // const { contentItems, channel, subscriber, tceUser } =
-  //   props && props.channel && props.contentItems.length > 1 && props.subscriber
-  //     ? props
-  //     : contentUpdateEmailDemoContent();
-
   if (!contentItems || !channel || !subscriber) {
-    contentItems = contentUpdateEmailDemoContent().contentItems;
-    channel = contentUpdateEmailDemoContent().channel;
-    subscriber = contentUpdateEmailDemoContent().subscriber;
-    tceUser = contentUpdateEmailDemoContent().tceUser;
+    ({ contentItems, channel, subscriber, tceUser } =
+      contentUpdateEmailDemoContent());
   }
 
   const capatilizedFrequency =

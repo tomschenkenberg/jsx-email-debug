@@ -3,10 +3,11 @@ import { SES } from "@aws-sdk/client-ses";
 import { ContentUpdateEmailTemplate } from "../../../emails/content-update";
 import { NextResponse } from "next/server";
 
-const ses = new SES({ region: process.env.AWS_SES_REGION });
+export const dynamic = "force-dynamic";
 
 async function SendEmail() {
   const html = await render(ContentUpdateEmailTemplate({}));
+  const ses = new SES({ region: process.env.AWS_SES_REGION ?? "eu-central-1" });
 
   const output = await ses.sendEmail({
     Source: "website@tce.exchange",
@@ -22,7 +23,7 @@ async function SendEmail() {
       },
       Subject: {
         Charset: "UTF-8",
-        Data: "JSX email to the rescue",
+        Data: "JSX email debug",
       },
     },
   });
